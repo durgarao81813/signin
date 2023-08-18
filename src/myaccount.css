@@ -1,0 +1,32 @@
+.main{
+    width: 100%;
+}
+.firsts{
+    background-color: #A5F3F9;
+    border-radius: 20px;
+}
+.second{
+    background-color: #DCA5F9;
+    border-radius: 20px;
+    color:#ED52F7;
+}
+.videoplayer{
+    height: 500px;
+    border-radius: 20px;
+    width: 100%;
+}
+.footer{
+    background-image: linear-gradient(#940FF0,#092DBF);
+}
+.image2{
+    height: 40px;
+}
+.image3{
+    height: 60px;
+}
+.icones{
+    margin-left: 20px;
+    height: 30px;
+    width:30px;
+    
+}
