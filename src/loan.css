@@ -1,4 +1,4 @@
-.main{
+.mains{
 
     height:100vh;
 }
@@ -13,8 +13,8 @@
 .timeline{
     width: 25px;
     height: 25px;
-}
-.MuiInputLabel-root {
+} 
+/* .MuiInputLabel-root {
     font-size: 25px !important;
     padding-bottom: 20px !important;
     
@@ -23,17 +23,17 @@
   .MuiInput-root {
     height: 35px !important;
     
-  }
+  } */
   .buttonfinal{
     font-size: 20px;
   }
-  .leftside{
-    border: black solid 2px;
+   .leftside{
+    border:2px solid black;
     border-radius: 15px 0px 0px 15px;
     font-size: 15px;
     color: black;
     width: 60px;
-  }
+  } 
   .rightside{
     border: black solid 2px;
     border-radius: 0px 15px 15px 0px;

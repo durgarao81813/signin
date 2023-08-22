@@ -15,13 +15,14 @@ import NativeSelect from '@mui/material/NativeSelect';
 
 
 
+
 const Loan = () => {
 
 
 
 
     return (
-        <div className="container-fluid main">
+        <div className="container-fluid mains">
             <div className='row'>
                 <div className='col-md-4  bg-dark first text-white '>
 
@@ -149,7 +150,7 @@ const Loan = () => {
                                 <div class="tab-pane p-2 m-3" id="second">
                                     <div class="namedesig">
                                         <div>
-                                            <p className='h3 text-secondary'>Do You have a second mortagag?</p>
+                                            <p className='h4 text-secondary'>Do You have a second mortagag?</p>
                                             <br />
                                             <div>
                                                 <input type="radio" className='btn-check ' name="first-one" id="success-outlined" />
