@@ -8,7 +8,15 @@ import { IoLogoWhatsapp } from 'react-icons/io'
 
 export default function Products() {
     const [data, setdata] = useState([])
+    const [searchData,setsearch]=useState([])
     const [switched,setswitched]=useState("")
+
+    const searchFunction=(event)=>{
+        console.log(event.target.value)
+        const newdatasearch=searchData.filter(eachitem=>eachitem.title.includes(event.target.value))
+        setdata([...newdatasearch])
+
+    }
 
     const allbutton=()=>{
         setswitched("")
@@ -36,7 +44,7 @@ export default function Products() {
                 const json = await response.json();
                 console.log(json)
                 const updatedata= json.map(eachitem=>{
-                    if(eachitem.category=="men's clothing"){
+                    if(eachitem.category==="men's clothing"){
                         return(
                             {
                                 category:"man",
@@ -68,6 +76,7 @@ export default function Products() {
                 // console.log(newdata)
                 console.log(updatedata)
                 setdata([...newdata])
+                setsearch([...json])
                 
 
             } catch (error) {
@@ -112,10 +121,10 @@ export default function Products() {
                     <div id="carouselExampleFade" class="carousel slide carousel-fade">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="image1.avif" class="d-block w-100" alt="..." />
+                                <img src="image2.avif" class="d-block w-100" alt="..." />
                             </div>
                             <div class="carousel-item">
-                                <img src="image2.avif" class="d-block w-100" alt="..." />
+                                <img src="image1.avif" class="d-block w-100" alt="..." />
                             </div>
                             <div class="carousel-item">
                                 <img src="image3.avif" class="d-block w-100" alt="..." />
@@ -136,14 +145,22 @@ export default function Products() {
             </div>
 
             <section className='container-fluid'>
-                <div className='p-1'>
-                    <center>
+                <div className='p-1 d-flex justify-content-between'>
+                    <div>
                     <button className='btn btn-outline-secondary m-1' onClick={allbutton}>All</button>
                     <button className='btn btn-outline-secondary m-1' onClick={menbutton}>Mens</button>
                     <button className='btn btn-outline-secondary m-1'onClick={womenbutton}>Womens</button>
                     <button className='btn btn-outline-secondary m-1' onClick={jewbutton}>Jewelery</button>
                     <button className='btn btn-outline-secondary m-1'onClick={elebutton}>Electronics</button>
-                    </center>
+                    </div>
+                    <div className='mt-2'>
+                        <input type="search" placeholder='search' onChange={searchFunction}/>
+
+                    </div>
+                    
+                    
+                     
+                    
 
                 </div>
                 <div className='d-flex flex-wrap'>
